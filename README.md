@@ -1,78 +1,96 @@
 # BOJAGI HOUSE — 브랜드 홍보 페이지
 
-> 조각을 이어, 세계를 감싸다.
-> 한국 전통 공예를 잇는 현대적인 생활 소품 브랜드 **BOJAGI HOUSE**의 원페이지 홍보 사이트입니다.
+> **Small patches, stitched into a wider world.**
+> 작은 조각을 이어, 더 넓은 세계를 감쌉니다.
 
-빌드 도구나 프레임워크 없이 **HTML · CSS · JavaScript** 만으로 만들어져 있어,
-파일을 열어 바로 수정하고 GitHub에 올리면 그대로 배포됩니다.
+한국의 유산을 현대의 생활로 잇는 브랜드 **BOJAGI HOUSE**(EUM PLUS, INC. · 부산)의
+원페이지 홍보 사이트입니다. 브랜드 덱(_BOJAGI HOUSE_ PDF)의 내용과 이미지를 그대로 옮겨
+웹으로 구성했습니다.
+
+빌드 도구나 프레임워크 없이 **HTML · CSS · JavaScript** 만으로 되어 있어,
+파일을 고치고 GitHub에 올리면 그대로 배포됩니다.
 
 ## 사이트 주소
 
 - 배포 주소: https://snailnail1009-cloud.github.io/startupk/
 - 이전 실습 페이지(STARTUP-UP BOOST AI)는 `pages/startup-class.html` 로 보관했습니다.
-  → https://snailnail1009-cloud.github.io/startupk/pages/startup-class.html
 
-## 페이지 구성
+## 페이지 구성 (브랜드 덱 목차 그대로)
 
 | 섹션 | 내용 |
 | --- | --- |
-| Hero | 브랜드 한 줄 메시지 + 조각보(패치워크) 비주얼, 핵심 지표 |
-| Story | 왜 보자기인가 — 브랜드 철학, 잇다 / 감싸다 / 나누다 |
-| Craft | 조각보 · 나전 · 한지 · 매듭 · 옻칠 다섯 가지 전통 기법 |
-| Collection | 대표 제품 5종과 가격, 전체 스토어 링크 |
-| Process | 장인 협업부터 해외 배송까지 4단계 제작 과정 |
-| Global | 32개국 배송 지도와 성장 지표 |
-| K-Culture | 장인 카드, 영문 뉴스레터, 공방 라이브, 리테일 파트너십 |
-| Reviews | 해외 고객 후기와 소개 매체 |
-| CTA | 글로벌 스토어 · 도매 문의 |
+| Hero | 브랜드 마크 + "Small patches, stitched into a wider world." |
+| Axes | Tradition × Contemporary / Craft × Lifestyle / Korea × Global |
+| Welcome | 브랜드 인사말 |
+| 01 About Us | 감싸고 잇는 전통의 현대적 해석, 세 가지 모토 |
+| 02 What We Make | 색 비율(70/10/8/5/7)과 소재·공정 이미지 |
+| 03 Highlights | 창업 로드맵 6단계 (2026 → 2027) |
+| 04 Project Portfolio | 작업 10점, 클릭하면 확대(라이트박스) |
+| 05 Reframed for Today | 유산 연구 — 박물관의 조각보를 오늘로 |
+| 06 Built to Belong | 건축 콘셉트 — 관문, 수면, 빛 |
+| 07 Contact Us | 주소 · 연락처 · 이메일 · 채널 |
 
 ### 주요 기능
 
-- **한국어 / 영어 전환** — 우측 상단 `KO / EN` 버튼. 선택한 언어는 브라우저에 기억됩니다.
-- **반응형 레이아웃** — 모바일(390px)부터 데스크톱까지 대응합니다.
+- **한국어 / 영어 전환** — 우측 상단 `KO / EN`. 이미지 대체 텍스트까지 함께 바뀌고,
+  선택한 언어는 브라우저에 기억됩니다. 첫 방문은 브라우저 언어를 따릅니다.
+- **반응형** — 모바일(390px)부터 데스크톱까지 가로 스크롤 없이 대응합니다.
+- **포트폴리오 확대 보기** — 이미지를 누르면 라이트박스가 열리고, `Esc`·바깥 클릭·닫기
+  버튼으로 닫힙니다.
 - **스크롤 등장 애니메이션** — `IntersectionObserver` 기반, 모션 최소화 설정을 존중합니다.
-- **이미지 파일 없는 비주얼** — 제품 이미지와 조각보 패턴을 모두 CSS로 그려 로딩이 빠릅니다.
 
 ## 폴더 구조
 
 ```
 .
-├── index.html                  # 브랜드 홍보 페이지 본문
+├── index.html                   # 본문 (한국어·영어 문구가 함께 들어 있음)
 ├── assets/
-│   ├── style.css               # 전체 스타일 (색상 토큰은 :root 에 모여 있음)
-│   ├── script.js               # 언어 전환 + 스크롤 애니메이션
-│   ├── favicon.svg             # 탭 아이콘
-│   └── og.png                  # 링크 공유용 미리보기 이미지 (1200×630)
-├── pages/startup-class.html    # 이전 실습 페이지 보관
-├── .github/workflows/deploy.yml# GitHub Pages 자동 배포
-└── .nojekyll                   # Jekyll 처리 없이 그대로 배포
+│   ├── style.css                # 전체 스타일 (색상 토큰은 :root 에 모여 있음)
+│   ├── script.js                # 언어 전환 · 스크롤 등장 · 라이트박스
+│   ├── favicon.svg              # 탭 아이콘
+│   ├── og.jpg                   # 링크 공유용 미리보기 (1200×630)
+│   └── img/                     # 브랜드 덱에서 추출해 최적화한 이미지 24장
+├── pages/startup-class.html     # 이전 실습 페이지 보관
+├── .github/workflows/deploy.yml # GitHub Pages 자동 배포
+└── .nojekyll                    # Jekyll 처리 없이 그대로 배포
 ```
+
+## 브랜드 색 (덱의 비율 그대로)
+
+| 비율 | 이름 | 값 | 쓰임 |
+| --- | --- | --- | --- |
+| 70% | Ramie White | `#f2eee6` | 바탕 |
+| 10% | Muted Red | `#a6453a` | 강조 · 문의 섹션 |
+| 8% | Dusty Indigo | `#2b5468` | 건축 섹션 |
+| 5% | Gardenia | `#c9ae79` | 포인트 |
+| 7% | Ink / Material | `#1a1917` | 글자 · 어두운 섹션 |
+
+`assets/style.css` 맨 위 `:root` 값만 바꾸면 사이트 전체 톤이 함께 바뀝니다.
 
 ## 내용 수정하기
 
-1. **문구** — `index.html` 에서 고치면 됩니다. 한 요소에 두 언어가 함께 들어 있습니다.
+1. **문구** — `index.html` 에서 고칩니다. 한 요소에 두 언어가 함께 들어 있습니다.
 
    ```html
    <h3 data-ko="한국어 문구" data-en="English text">한국어 문구</h3>
    ```
 
-   `data-ko`(한국어), `data-en`(영어), 그리고 태그 안의 글자까지 **세 곳을 모두** 바꿔 주세요.
-   줄을 바꾸고 싶으면 태그 안에는 `<br />`, 속성 안에는 `&#10;` 을 씁니다.
+   `data-ko`, `data-en`, 태그 안의 글자까지 **세 곳을 모두** 바꿔 주세요.
+   줄바꿈은 태그 안에서는 `<br />`, 속성 안에서는 `&#10;` 을 씁니다.
 
-2. **색상** — `assets/style.css` 맨 위 `:root` 의 값만 바꾸면 사이트 전체 톤이 바뀝니다.
-   (오방색에서 가져온 `--clay` 적 · `--indigo` 청 · `--gold` 황 · `--ink` 먹)
+2. **이미지 대체 텍스트** — `data-alt-ko` / `data-alt-en` 속성을 함께 고칩니다.
 
-3. **제품 / 가격** — `index.html` 의 `<section class="section collection">` 안 `<article class="product">` 블록을 복사해 늘리거나 지우면 됩니다.
+3. **이미지 교체** — `assets/img/` 의 같은 이름으로 덮어쓰면 됩니다.
+   포트폴리오는 `work-01.jpg` ~ `work-10.jpg` 입니다.
+   용량이 큰 사진은 가로 1200px 내외로 줄여서 올리는 편이 좋습니다.
 
-4. **바꿔야 할 링크** — 실제 판매 채널로 교체하세요.
-   - 글로벌 스토어 버튼: `https://www.etsy.com/`
-   - 문의 이메일: `hello@bojagihouse.com`
-   - 인스타그램: `https://www.instagram.com/`
+4. **바꿔야 할 정보** — 덱에 적힌 값을 그대로 넣어 두었습니다. 실제 정보로 교체하세요.
+   - 주소 `123 Anywhere St., Busan City, ST 12345`
+   - 전화 `+82 10-8961-3327`, 이메일 `hello@bojagihouse.com` / `bojagihouse@naver.com`
+   - Behance · Instagram · Telegram 링크
    - `<head>` 의 `og:url` · `canonical` 주소 (자체 도메인을 쓸 경우)
 
 ## 로컬에서 확인하기
-
-`index.html` 을 브라우저로 열어도 되고, 간단한 서버를 띄워도 됩니다.
 
 ```bash
 python3 -m http.server 8000
@@ -85,23 +103,24 @@ python3 -m http.server 8000
 
 ### 최초 1회 설정
 
-1. GitHub 저장소 → **Settings** → **Pages** 로 이동
+1. GitHub 저장소 → **Settings** → **Pages**
 2. **Build and deployment → Source** 를 **GitHub Actions** 로 선택
 
 ### 이후 배포
 
-`main` 브랜치에 푸시되면 `.github/workflows/deploy.yml` 이 실행되어 자동으로 배포됩니다.
+`main` 브랜치에 푸시되면 `.github/workflows/deploy.yml` 이 실행되어 자동 배포됩니다.
 
 ```bash
 git add .
-git commit -m "브랜드 페이지 문구 수정"
+git commit -m "브랜드 페이지 수정"
 git push origin main
 ```
 
-- 진행 상황은 저장소 상단 **Actions** 탭에서 볼 수 있습니다. (보통 1분 내외)
-- **Actions** 탭 → *Deploy to GitHub Pages* → **Run workflow** 로 수동 배포도 가능합니다.
-- 작업용 브랜치에서 개발한 뒤 Pull Request로 `main` 에 합치면, 합쳐지는 순간 배포됩니다.
+- 진행 상황은 저장소 상단 **Actions** 탭에서 확인합니다. (보통 1분 내외)
+- **Actions** → *Deploy to GitHub Pages* → **Run workflow** 로 수동 배포도 가능합니다.
+- 작업 브랜치에서 개발한 뒤 Pull Request로 `main` 에 합치면, 합쳐지는 순간 배포됩니다.
 
-## 라이선스
+## 참고
 
-본문 텍스트와 제품 정보는 데모용 예시입니다. 실제 판매 정보로 바꿔 사용하세요.
+본문 문구와 이미지는 제공된 브랜드 덱에서 가져왔습니다. 로드맵 일정과 연락처 등은
+실제 사업 상황에 맞게 업데이트해 사용하세요.
