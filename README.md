@@ -47,6 +47,7 @@
 ├── assets/
 │   ├── style.css                # 전체 스타일 (색상 토큰은 :root 에 모여 있음)
 │   ├── script.js                # 언어 전환 · 스크롤 등장 · 라이트박스
+│   ├── fonts/                   # Open Sauce One (woff2) + OFL 라이선스
 │   ├── favicon.svg              # 탭 아이콘
 │   ├── og.jpg                   # 링크 공유용 미리보기 (1200×630)
 │   └── img/                     # 브랜드 덱에서 추출해 최적화한 이미지 24장
@@ -54,6 +55,14 @@
 ├── .github/workflows/deploy.yml # GitHub Pages 자동 배포
 └── .nojekyll                    # Jekyll 처리 없이 그대로 배포
 ```
+
+## 타이포그래피 (브랜드 덱과 동일)
+
+| 쓰임 | 폰트 | 비고 |
+| --- | --- | --- |
+| 워드마크 · 제목 · 본문 | **Open Sauce One** | 덱에 쓰인 폰트. Google Fonts에 없어 `assets/fonts/` 에 직접 넣었습니다(SIL OFL, 라이선스 동봉). |
+| 강조 문구 · 축(×) 문장 | **Noto Serif Display** | 덱에서 세리프로 들어간 문장에만 사용 |
+| 한글 | **Noto Sans KR** / **Noto Serif KR** | 위 두 폰트의 한글 짝 |
 
 ## 브랜드 색 (덱의 비율 그대로)
 
